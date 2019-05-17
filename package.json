@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "pm2 start",
+    "build": "npm install && tsc",
+    "dev": "pm2 kill && tsc && pm2 start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,6 +15,8 @@
     "cron": "^1.7.1",
     "express": "^4.16.4",
     "moment": "^2.24.0",
-    "request": "^2.88.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.88.0",
+    "typescript": "^3.4.5"
   }
 }
