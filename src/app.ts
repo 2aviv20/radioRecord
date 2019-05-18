@@ -31,6 +31,7 @@ app.use(function (req, res, next) {
 //routes
 
 // stream the audio
+app.get('/test', (req,res) => res.send("hi hi hi "));
 app.get('/mp3', (req,res) => streamMusic.streamMp3(req,res));
 app.get('/getfileList', (req,res) => streamMusic.fileList(req,res));
 
