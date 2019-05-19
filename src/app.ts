@@ -46,6 +46,52 @@ new CronJob('0 12 * * 5', function() {
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
 
+//cron job kike samuel 100 fm
+
+new CronJob('0 22 * * 0', function() {
+    console.log("smash");
+    const options = {
+        stream: request('http://100fm.streamgates.net/Radios100Fm'),
+        mp3Path: path.join(__dirname, "../mp3"),
+        fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
+        endTime:'1:00:00'
+    };
+    record.writeToFile(options);
+}, null, true, 'Asia/Jerusalem');
+
+new CronJob('0 22 * * 1', function() {
+    console.log("smash");
+    const options = {
+        stream: request('http://100fm.streamgates.net/Radios100Fm'),
+        mp3Path: path.join(__dirname, "../mp3"),
+        fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
+        endTime:'1:00:00'
+    };
+    record.writeToFile(options);
+}, null, true, 'Asia/Jerusalem');
+
+new CronJob('0 22 * * 2', function() {
+    console.log("smash");
+    const options = {
+        stream: request('http://100fm.streamgates.net/Radios100Fm'),
+        mp3Path: path.join(__dirname, "../mp3"),
+        fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
+        endTime:'1:00:00'
+    };
+    record.writeToFile(options);
+}, null, true, 'Asia/Jerusalem');
+
+new CronJob('0 22 * * 3', function() {
+    console.log("smash");
+    const options = {
+        stream: request('http://100fm.streamgates.net/Radios100Fm'),
+        mp3Path: path.join(__dirname, "../mp3"),
+        fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
+        endTime:'1:00:00'
+    };
+    record.writeToFile(options);
+}, null, true, 'Asia/Jerusalem');
+
 app.listen(port, function () { return console.log("client server listening on port " + port + "!"); });
 
 
@@ -67,5 +113,4 @@ app.listen(port, function () { return console.log("client server listening on po
 //     res.setHeader("content-type", "audio/mpeg");
 //     fs.createReadStream(filePath).pipe(res);
 // });
-
 
