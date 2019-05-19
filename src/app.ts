@@ -93,17 +93,16 @@ new CronJob('0 22 * * 3', function() {
 }, null, true, 'Asia/Jerusalem');
 
 //niro at midnight 100fm
-// new CronJob('0 00 * * 0', function() {
+// new CronJob('0 00 * * 0', function() {ts
     console.log("midnight");
     const options = {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `niro_at_midnight${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'2:00:00'
+        endTime:'02:00:00'
     };
     record.writeToFile(options);
 // }, null, true, 'Asia/Jerusalem');
-
 app.listen(port, function () { return console.log("client server listening on port " + port + "!"); });
 
 
