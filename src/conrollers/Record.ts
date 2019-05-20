@@ -20,7 +20,7 @@ export class Record {
     writeToFile(options:writeToFileOptions){
         console.log("start recording");
         //send telegram message
-        bot.telegram("start recording");
+        bot.telegram(`tart recording , ${options.fileName}`);
     
         options.stream.on('data',(chunk)=>{
             fs.appendFileSync(`${options.mp3Path}/${options.fileName}`, chunk);
@@ -28,7 +28,7 @@ export class Record {
                 options.stream.abort();
                 console.log("finish recording.")
                 //send telegram message
-                bot.telegram("finish recording.");
+                bot.telegram(`finish recording, ${options.fileName}`);
             }
         });
     }

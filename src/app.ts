@@ -54,7 +54,7 @@ new CronJob('0 22 * * 0', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'1:00:00'
+        endTime:'24:00:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
@@ -65,7 +65,7 @@ new CronJob('0 22 * * 1', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'1:00:00'
+        endTime:'24:00:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
@@ -76,7 +76,7 @@ new CronJob('0 22 * * 2', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'1:00:00'
+        endTime:'24:00:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
@@ -87,22 +87,11 @@ new CronJob('0 22 * * 3', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'1:00:00'
+        endTime:'24:00:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
 
-//niro at midnight 100fm
-// new CronJob('0 00 * * 0', function() {ts
-    console.log("midnight");
-    const options = {
-        stream: request('http://100fm.streamgates.net/Radios100Fm'),
-        mp3Path: path.join(__dirname, "../mp3"),
-        fileName: `niro_at_midnight${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'02:00:00'
-    };
-    record.writeToFile(options);
-// }, null, true, 'Asia/Jerusalem');
 app.listen(port, function () { return console.log("client server listening on port " + port + "!"); });
 
 
