@@ -21,7 +21,14 @@ export class StreamMusic {
     }
 
     streamMp3(req: Request, res: Response) {
-        const filePath = "./mp3/kike_samuel_first_record.mp3";
+        const fileName = req.query.fileName;
+        if(fileName == undefined || fileName == null || fileName == ""){
+            res.send("file name is empty");
+        }
+        const filePath = `./mp3/${fileName}`;
+        if (!fs.existsSync(filePath)) {
+            res.send("the file isnot exist on the server");
+        }
         const stat = fs.statSync(filePath);
         const total = stat.size;
         if (req.headers.range) {
