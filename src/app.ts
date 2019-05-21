@@ -54,7 +54,7 @@ new CronJob('0 22 * * 0', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'24:00:00'
+        endTime:'23:59:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
@@ -65,7 +65,7 @@ new CronJob('0 22 * * 1', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'24:00:00'
+        endTime:'23:59:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
@@ -76,7 +76,7 @@ new CronJob('0 22 * * 2', function() {
         stream: request('http://100fm.streamgates.net/Radios100Fm'),
         mp3Path: path.join(__dirname, "../mp3"),
         fileName: `smash_shlomi_kaufman_${moment().format("MM-DD-YYYY")}.mp3`,
-        endTime:'24:00:00'
+        endTime:'23:59:00'
     };
     record.writeToFile(options);
 }, null, true, 'Asia/Jerusalem');
